@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.world-map {
+
+}
+
+.country-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    list-style: none;
+    border: 1px solid black;
+}
+
+li {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
+
+.country-name {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 5px;
+}
+
+.population {
+    margin-left: 5px;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.purple {
+    color: purple;
+}
+
+.black {
+    color: black;
+}
+
+.flag {
+    width: 50px;
+}
+
