@@ -140,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"1Mq12":[function(require,module,exports) {
+})({"cgLB2":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "4a236f9275d0a351";
-module.bundle.HMR_BUNDLE_ID = "b5b6c481d56a3cb1";
+module.bundle.HMR_BUNDLE_ID = "5bb40f258eb82e9b";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -458,76 +458,38 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"5HwUs":[function(require,module,exports) {
+},{}],"iJDgK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-// console.log('Hallo daar!');
-// Country information part 1
-const URI = "https://restcountries.com/v2/";
-const ENDPOINT_ALL = "all";
-async function fetchData() {
-    try {
-        const result = await _axiosDefault.default.get(URI + ENDPOINT_ALL);
-        console.log(result.data);
-        return result.data;
-    } catch (e) {
-        console.error(e);
-    }
-}
-async function showData() {
-    let data = await fetchData();
-    data.sort((a, b)=>{
-        return a.population - b.population;
-    });
-    data.map((country)=>{
-        const countryToPrint = document.getElementById('country-list');
-        countryToPrint.innerHTML += `
-        <li class="${getRegionColor(country.region)}"><img class="flag" src="${country.flags.svg}" alt="Country flag"><span class="country-name">${country.name}</span>
-        <span class="population black">Has a population of ${country.population}</span></li>
-    `;
-    });
-}
-function getRegionColor(region) {
-    let color = "";
-    switch(region){
-        case "Asia":
-            color = "red";
-            break;
-        case "Africa":
-            color = "blue";
-            break;
-        case "Americas":
-            color = "green";
-            break;
-        case "Europe":
-            color = "yellow";
-            break;
-        case "Oceania":
-            color = "purple";
-            break;
-        default:
-            color = "black";
-            break;
-    }
-    return color;
-}
-showData();
-// Country information part 2
 async function fetchCountry(name) {
-    const ENDPOINT_NAME = `name/${name}`;
+    const URI = 'https://restcountries.com/v2/';
+    const ENDPOINT = 'name/';
+    console.log(name);
     try {
-        const country = await _axiosDefault.default.get(URI + ENDPOINT_NAME);
+        const result = await _axiosDefault.default.get(URI + ENDPOINT + name);
+        console.log(URI + ENDPOINT + name);
+        console.log(result.data);
+        const list = document.getElementById('list');
+        const countryName = document.createElement("li");
+        countryName.textContent = result.data[0].name;
+        const subregion = document.createElement('li');
+        subregion.textContent = result.data[0].subregion;
+        const countryPopulation = document.createElement("li");
+        const capital = document.createElement("li");
+        const currency = document.createElement("li");
+        const language = document.createElement("li");
+        list.appendChild(countryName);
+        list.appendChild(subregion);
     } catch (e) {
         console.error(e);
     }
 }
-const btn = document.getElementById("button");
-const countryName = document.getElementById("country-name");
-btn.addEventListener("click", ()=>{
-    fetchCountry(countryName.value);
+const name = document.getElementById("country-name");
+const button = document.getElementById("button");
+button.addEventListener('click', ()=>{
+    fetchCountry(name.value);
 });
-console.log(countryName);
 
 },{"axios":"1IeuP","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1IeuP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -4653,6 +4615,6 @@ function isAxiosError(payload) {
 }
 exports.default = isAxiosError;
 
-},{"./../utils.js":"60BxC","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["1Mq12","5HwUs"], "5HwUs", "parcelRequirecb08")
+},{"./../utils.js":"60BxC","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["cgLB2","iJDgK"], "iJDgK", "parcelRequirecb08")
 
-//# sourceMappingURL=index.d56a3cb1.js.map
+//# sourceMappingURL=countrySearch.8eb82e9b.js.map
