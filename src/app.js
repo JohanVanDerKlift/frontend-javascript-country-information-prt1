@@ -1,10 +1,16 @@
 import axios from "axios";
 
-console.log('Hallo daar!');
+// console.log('Hallo daar!');
+
+// Country information part 1
+
+const URI = "https://restcountries.com/v2/";
+const ENDPOINT_ALL = "all";
+
 
 async function fetchData() {
   try {
-    const result = await axios.get('https://restcountries.com/v2/all');
+    const result = await axios.get(URI + ENDPOINT_ALL);
     console.log(result.data);
     return result.data;
   } catch (e) {
@@ -52,3 +58,23 @@ function getRegionColor(region) {
 }
 
 showData();
+
+// Country information part 2
+
+async function fetchCountry(name) {
+  const ENDPOINT_NAME = `name/${name}`;
+  try {
+    const country = await axios.get(URI + ENDPOINT_NAME)
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+const btn = document.getElementById("button");
+const countryName = document.getElementById("country-name");
+
+btn.addEventListener("click", () => {
+  fetchCountry(countryName.value);
+})
+
+console.log(countryName);

@@ -462,10 +462,13 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-console.log('Hallo daar!');
+// console.log('Hallo daar!');
+// Country information part 1
+const URI = "https://restcountries.com/v2/";
+const ENDPOINT_ALL = "all";
 async function fetchData() {
     try {
-        const result = await _axiosDefault.default.get('https://restcountries.com/v2/all');
+        const result = await _axiosDefault.default.get(URI + ENDPOINT_ALL);
         console.log(result.data);
         return result.data;
     } catch (e) {
@@ -510,6 +513,21 @@ function getRegionColor(region) {
     return color;
 }
 showData();
+// Country information part 2
+async function fetchCountry(name) {
+    const ENDPOINT_NAME = `name/${name}`;
+    try {
+        const country = await _axiosDefault.default.get(URI + ENDPOINT_NAME);
+    } catch (e) {
+        console.error(e);
+    }
+}
+const btn = document.getElementById("button");
+const countryName = document.getElementById("country-name");
+btn.addEventListener("click", ()=>{
+    fetchCountry(countryName.valueOf());
+});
+console.log(countryName);
 
 },{"axios":"1IeuP","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1IeuP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
