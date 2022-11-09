@@ -512,22 +512,24 @@ function getRegionColor(region) {
     }
     return color;
 }
-showData();
-// Country information part 2
-async function fetchCountry(name) {
-    const ENDPOINT_NAME = `name/${name}`;
-    try {
-        const country = await _axiosDefault.default.get(URI + ENDPOINT_NAME);
-    } catch (e) {
-        console.error(e);
-    }
-}
-const btn = document.getElementById("button");
-const countryName = document.getElementById("country-name");
-btn.addEventListener("click", ()=>{
-    fetchCountry(countryName.value);
-});
-console.log(countryName);
+showData(); // Country information part 2
+ // async function fetchCountry(name) {
+ //   const ENDPOINT_NAME = `name/${name}`;
+ //   try {
+ //     const country = await axios.get(URI + ENDPOINT_NAME)
+ //   } catch (e) {
+ //     console.error(e)
+ //   }
+ // }
+ //
+ // const btn = document.getElementById("button");
+ // const countryName = document.getElementById("country-name");
+ //
+ // btn.addEventListener("click", () => {
+ //   fetchCountry(countryName.value);
+ // })
+ //
+ // console.log(countryName);
 
 },{"axios":"1IeuP","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1IeuP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
