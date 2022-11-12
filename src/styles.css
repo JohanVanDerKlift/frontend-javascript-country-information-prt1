@@ -1,34 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 main {
-    display: flex;
-    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 .world-map {
-
+    display: flex;
+    width: 100%;
 }
 
 .country-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 
     list-style: none;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 li {
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 500px;
+    height: 50px;
 
     margin-bottom: 15px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
+.flag-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.flag {
+
+}
+
+
 .country-name {
-    font-family: 'Roboto', sans-serif;
     margin-left: 5px;
+    font-weight: bold;
 }
 
 .population {
@@ -48,7 +63,7 @@ li {
 }
 
 .yellow {
-    color: yellow;
+    color: #FFD435;
 }
 
 .purple {

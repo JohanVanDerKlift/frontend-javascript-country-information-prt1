@@ -480,8 +480,8 @@ async function showData() {
     data.map((country)=>{
         const countryToPrint = document.getElementById('country-list');
         countryToPrint.innerHTML += `
-        <li class="${getRegionColor(country.region)}"><img class="flag" src="${country.flags.svg}" alt="Country flag"><span class="country-name">${country.name}</span>
-        <span class="population black">Has a population of ${country.population}</span></li>
+        <li class="${getRegionColor(country.region)}"><div class="flag-wrapper"><img class="flag" src="${country.flags.svg}" alt="Country flag"></div><div class="country-wrapper"><div class="country-name">${country.name}</div>
+        <div class="population black">Has a population of ${country.population}</div></div></li>
     `;
     });
 }
