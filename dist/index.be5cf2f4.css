@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 
 .search-link {
     display: flex;
@@ -15,6 +14,7 @@ body {
     margin-bottom: 50px;
 }
 
+
 .link {
     color: blue;
     text-decoration: none;
@@ -22,14 +22,17 @@ body {
     margin-right: 5px;
 }
 
+
 .link:hover {
     color: purple;
 }
+
 
 .world-map {
     display: flex;
     width: 100%;
 }
+
 
 .country-list {
     display: flex;
@@ -41,6 +44,7 @@ body {
     /*border: 1px solid black;*/
 }
 
+
 li {
     display: flex;
     flex-wrap: wrap;
@@ -51,12 +55,14 @@ li {
     /*border: 1px solid black;*/
 }
 
+
 .flag-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
 }
+
 
 .flag {
 
@@ -68,34 +74,43 @@ li {
     font-weight: bold;
 }
 
+
 .population {
     margin-left: 5px;
 }
+
 
 .blue {
     color: blue;
 }
 
+
 .green {
     color: green;
 }
+
 
 .red {
     color: red;
 }
 
+
 .yellow {
     color: #FFD435;
 }
+
 
 .purple {
     color: purple;
 }
 
+
 .black {
     color: black;
 }
 
+
 .flag {
     width: 50px;
 }
+/*# sourceMappingURL=index.be5cf2f4.css.map */
