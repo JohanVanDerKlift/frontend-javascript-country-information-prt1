@@ -1,11 +1,10 @@
 import axios from "axios";
 
-const URI = "https://restcountries.com/v2/";
-const ENDPOINT_ALL = "all";
+console.log('Hallo daar!');
 
 async function fetchData() {
   try {
-    const result = await axios.get(URI + ENDPOINT_ALL);
+    const result = await axios.get('https://restcountries.com/v2/all');
     console.log(result.data);
     return result.data;
   } catch (e) {
@@ -22,9 +21,13 @@ async function showData() {
     const countryToPrint = document.getElementById('country-list');
     countryToPrint.innerHTML += `
         <li class="${getRegionColor(country.region)}">
-          <img class="flag" src="${country.flags.svg}" alt="Country flag">
-          <span class="country-name">${country.name}</span>
-          <span class="population black">Has a population of ${country.population}</span>
+            <div class="flag-wrapper">
+                <img class="flag" src="${country.flags.svg}" alt="Country flag">
+            </div>
+            <div class="country-wrapper">
+                <div class="country-name">${country.name}</div>
+                <div class="population black">Has a population of ${country.population}</div>
+            </div>
         </li>
     `;
   })

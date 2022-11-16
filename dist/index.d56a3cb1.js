@@ -462,11 +462,10 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-const URI = "https://restcountries.com/v2/";
-const ENDPOINT_ALL = "all";
+console.log('Hallo daar!');
 async function fetchData() {
     try {
-        const result = await _axiosDefault.default.get(URI + ENDPOINT_ALL);
+        const result = await _axiosDefault.default.get('https://restcountries.com/v2/all');
         console.log(result.data);
         return result.data;
     } catch (e) {
@@ -482,9 +481,13 @@ async function showData() {
         const countryToPrint = document.getElementById('country-list');
         countryToPrint.innerHTML += `
         <li class="${getRegionColor(country.region)}">
-          <img class="flag" src="${country.flags.svg}" alt="Country flag">
-          <span class="country-name">${country.name}</span>
-          <span class="population black">Has a population of ${country.population}</span>
+            <div class="flag-wrapper">
+                <img class="flag" src="${country.flags.svg}" alt="Country flag">
+            </div>
+            <div class="country-wrapper">
+                <div class="country-name">${country.name}</div>
+                <div class="population black">Has a population of ${country.population}</div>
+            </div>
         </li>
     `;
     });
