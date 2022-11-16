@@ -1,114 +1,99 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap";
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.search-link {
     font-family: 'Roboto', sans-serif;
-    justify-content: center;
 }
-h1 {
-    text-align: center;
-    font-family: 'Kalam', cursive;
-    color: midnightblue;
-}
-.image-wrapper {
-    display: flex;
-    justify-content: center;
-}
-.earth {
-    display: flex;
-    max-width: 500px;
-}
-.world-map {
 
+.world-map {
+    display: flex;
+    width: 100%;
 }
+
+.search-link {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.link {
+    color: blue;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.link:hover {
+    color: purple;
+}
+
 .country-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 
     list-style: none;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
-.input-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
+
 li {
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 500px;
+    height: 50px;
 
     margin-bottom: 15px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
+
+.flag-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.flag {
+    width: 100px;
+    height: 40px;
+}
+
 .country-name {
-    font-family: 'Roboto', sans-serif;
     margin-left: 5px;
+    font-weight: bold;
 }
+
 .population {
     margin-left: 5px;
 }
-input {
-    width: 300px;
-    height: 30px;
-    padding-left: 5px;
-    margin: 0;
-    border: 1px solid black;
-    border-right: none;
-    border-radius: 5px 0 0 5px;
-}
-button{
-    width: 60px;
-    height: 34px;
-    background-color: aqua;
-    color: #282c34;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    border: none;
-    margin: 0;
-    border-radius: 0 5px 5px 0;
-}
-.info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-}
-.flag {
-    display: flex;
-    justify-content: center;
-}
-.name {
-    font-family: 'Kalam', cursive;
-}
-.country-information {
-    font-family: 'Roboto', sans-serif;
-}
-.error {
 
-}
 .blue {
     color: blue;
 }
+
 .green {
     color: green;
 }
+
 .red {
     color: red;
 }
+
 .yellow {
-    color: yellow;
+    color: #FFD435;
 }
+
 .purple {
     color: purple;
 }
+
 .black {
     color: black;
 }
+
 .flag {
     width: 50px;
 }
