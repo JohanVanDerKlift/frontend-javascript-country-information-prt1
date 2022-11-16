@@ -7,11 +7,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.world-map {
-    display: flex;
-    width: 100%;
-}
-
 .search-link {
     display: flex;
     justify-content: center;
@@ -28,6 +23,11 @@ body {
 
 .link:hover {
     color: purple;
+}
+
+.world-map {
+    display: flex;
+    width: 100%;
 }
 
 .country-list {
@@ -58,8 +58,7 @@ li {
 }
 
 .flag {
-    width: 100px;
-    height: 40px;
+
 }
 
 
@@ -99,4 +98,3 @@ li {
 .flag {
     width: 50px;
 }
-
