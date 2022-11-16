@@ -1,11 +1,13 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap";
-main {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+}
+.search-link {
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
 }
 h1 {
     text-align: center;
